@@ -6,11 +6,58 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
 
-    <changeSet id="3" author="bob">
+    <changeSet id="1" author="cat">
         <sql>
             <!--直接插入语句-->
             delete from user where id =110;
         </sql>
     </changeSet>
 
+    <changeSet id="2" author="cat">
+        <sql>
+            drop table user2;
+            CREATE TABLE `user2` (
+            `id` int(11) NOT NULL AUTO_INCREMENT,
+            `name` varchar(50) DEFAULT NULL,
+            PRIMARY KEY (`id`)
+            ) ENGINE=InnoDB AUTO_INCREMENT=207 DEFAULT CHARSET=latin1;
+        </sql>
+    </changeSet>
+
+    <changeSet id="3" author="cat">
+        <sql>
+            drop table user3;
+            CREATE TABLE `user3` (
+            `id` int(11) NOT NULL AUTO_INCREMENT,
+            `name` varchar(50) DEFAULT NULL,
+            PRIMARY KEY (`id`)
+            ) ENGINE=InnoDB AUTO_INCREMENT=207 DEFAULT CHARSET=latin1;
+        </sql>
+    </changeSet>
+    <changeSet id="4" author="cat">
+        <sql>
+            drop table user4;
+            CREATE TABLE `user4` (
+            `id` int(11) NOT NULL AUTO_INCREMENT,
+            `name` varchar(50) DEFAULT NULL,
+            PRIMARY KEY (`id`)
+            ) ENGINE=InnoDB AUTO_INCREMENT=207 DEFAULT CHARSET=latin1;
+        </sql>
+    </changeSet>
+
+    <changeSet id="5" author="cat">
+        <sql>
+            drop table user2;
+        </sql>
+    </changeSet>
+    <changeSet id="6" author="cat">
+        <sql>
+            drop table user3;
+        </sql>
+    </changeSet>
+    <changeSet id="7" author="cat">
+        <sql>
+            drop table user4;
+        </sql>
+    </changeSet>
 </databaseChangeLog>

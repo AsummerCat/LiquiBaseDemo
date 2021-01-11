@@ -47,6 +47,7 @@
 
     </dependencies>
 
+    <!--这里用来执行  mvn liquibase:update 语法-->
     <build>
         <pluginManagement>
             <plugins>
@@ -56,6 +57,7 @@
                         <configuration>
                             <verbose>true</verbose>
                             <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
+                            <!--配置文件地址-->
                             <propertyFile>${project.basedir}/src/main/resources/liquibase.properties</propertyFile>
                         </configuration>
                     </plugin>
